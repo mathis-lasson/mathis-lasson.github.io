@@ -219,6 +219,39 @@
     document.body.style.overflow = 'hidden'; // Add this line
     }
 
+    // Get all images and navigation arrows
+    var images = document.querySelectorAll('.carousel-image');
+    var prevArrow = document.querySelector('.carousel-arrow-prev');
+    var nextArrow = document.querySelector('.carousel-arrow-next');
+
+    // Set the first image as active
+    images[0].classList.add('active');
+
+    // Function to change active image
+    function changeImage(next) {
+    // Find current active image
+    var activeImage = Array.from(images).findIndex(image => image.classList.contains('active'));
+
+    // Remove active class from current image
+    images[activeImage].classList.remove('active');
+
+    // Calculate next active image index
+    var nextImage = (next) ? (activeImage + 1) % images.length : (activeImage - 1 + images.length) % images.length;
+
+    // Add active class to next image
+    images[nextImage].classList.add('active');
+    }
+
+    // Add event listeners for navigation arrows
+    prevArrow.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeImage(false);
+    });
+
+    nextArrow.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeImage(true);
+    });
 
 
     // When the user clicks anywhere outside of the modal, close it

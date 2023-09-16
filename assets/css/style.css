@@ -716,9 +716,18 @@ body .d2c_mobile_view {
 }
 
 #myBtn {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  border: none;
   display: inline-block; /* Inline element with block properties */
   width: auto; /* Auto width based on content */
   background-color: rgb(9, 29, 66);
+  border-radius: 7px;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.16); /* Adjust as needed */
+  color: white;
   /* Add other styles as needed */
 }
 
@@ -728,6 +737,36 @@ body .d2c_mobile_view {
   background-color: rgb(51, 106, 207);
   /* Add other styles as needed */
 }
+
+.carousel-image {
+  display: none;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 60%;
+  font-size: 3em;
+  color: black;
+  padding: 5px;
+}
+
+.carousel-arrow-prev {
+  left: 10px;
+}
+
+.carousel-arrow-next {
+  right: 10px;
+}
+
+
 
 
 
