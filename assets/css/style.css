@@ -59,11 +59,11 @@ h4{
   z-index: 1100;
 }
 #preloader > img {
-  width: 92px;
+  width: 400px;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
 }
 
 /*Custom Style
@@ -748,6 +748,7 @@ body .d2c_mobile_view {
 
 .carousel {
   position: relative;
+  display: inline-block; /* Keeps the size of the container to the size of the images */
 }
 
 .carousel-arrow {
@@ -915,7 +916,7 @@ body .d2c_mobile_view {
 }
 .d2c_footer .d2c_footer_logo{
   margin-bottom: 20px;
-  width: 125px;
+  width: 210px;
 }
 .d2c_footer_content ul{
   padding-left: 17px;
